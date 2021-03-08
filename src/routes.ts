@@ -11,4 +11,6 @@ const upload = multer(uploadConfig.multer);
 
 routes.post('/upload', upload.single('file'), uploadController.update);
 
+routes.get('/teste', uploadController.index);
+
 export default routes;

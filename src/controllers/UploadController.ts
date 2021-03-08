@@ -2,6 +2,10 @@ import S3StorageProvider from '@storage/S3StorageProvider';
 import { Request, Response } from 'express';
 
 export default class UploadController {
+  public async index(request: Request, response: Response): Promise<Response> {
+    return response.json({ hello: 'world' });
+  }
+
   public async update(request: Request, response: Response): Promise<Response> {
     const { filename } = request.file;
 
