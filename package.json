@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev --files -r tsconfig-paths/register --inspect --ignore-watch node_modules src/server.ts"
+    "start": "node dist/server.js",
+    "dev:server": "ts-node-dev --files -r tsconfig-paths/register --inspect --ignore-watch node_modules src/server.ts",
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist  --copy-files"
+
   },
   "dependencies": {
     "aws-sdk": "^2.858.0",
