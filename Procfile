@@ -1,1 +1,1 @@
-web:yarn build && yarn start
+web: ENV_SILENT=true yarn build && yarn start
